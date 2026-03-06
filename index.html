@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alghero, schiva la buca</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="title-container">
+        <img class="title-img" src="/public/img/logo-city.png" alt="logo city" />
+        <div class="title">Alghero, schiva la buca</div>
+        <img class="title-img" src="/public/img/logo-city.png" alt="logo city" />
+      </div>
+
+      <!-- Canvas game -->
+      <canvas id="gameCanvas"></canvas>
+
+      <div class="btn-container">
+        <div id="btnLeft" class="btn">&leftarrow;</div>
+        <div id="btnStart" class="btn">Start</div>
+        <div id="btnRight" class="btn">&rightarrow;</div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/game.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        const c = document.getElementById("gameCanvas");
+        if (window.Game && typeof window.Game.init === "function") {
+          window.Game.init(c);
+        }
+      });
+    </script>
+  </body>
+</html>
