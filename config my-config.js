@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
- base: ''
+  base: "/game_alghero_road/",
 });
